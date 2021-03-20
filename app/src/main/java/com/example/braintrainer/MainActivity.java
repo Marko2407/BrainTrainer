@@ -32,12 +32,14 @@ public class MainActivity extends AppCompatActivity {
     int numberOfQuestions = 0;
     TextView timerTextView;
 
+
     public void start(View view){
 
         goButton.setVisibility(View.INVISIBLE);
         scoreTextView.setText(Integer.toString(score )+ "/" + Integer.toString(numberOfQuestions));
         gameLayout.setVisibility(View.VISIBLE);
         playAgain(findViewById(R.id.timerTextView));
+
 
     }
 
@@ -111,6 +113,8 @@ public class MainActivity extends AppCompatActivity {
             public void onFinish() {
                 resultTextView.setText("Done!");
                 playAgainButton.setVisibility(View.VISIBLE);
+                resultTextView.setVisibility(View.VISIBLE);
+
 
             }
         }.start();
@@ -135,6 +139,7 @@ public class MainActivity extends AppCompatActivity {
         goButton.setVisibility(View.VISIBLE);
         newQuestion();
         gameLayout.setVisibility(View.INVISIBLE);
+
 
 
 
